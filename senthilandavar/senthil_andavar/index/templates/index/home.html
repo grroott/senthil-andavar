@@ -1,11 +1,13 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Senthil Andavar</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<!--   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
-  <meta content="" name="description">
+  <meta content="" name="description"> -->
 
   <!-- Favicons -->
 <!--   <link href="img/favicon.png" rel="icon">
@@ -15,17 +17,17 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{% static 'index/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  <link href="{% static 'index/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'index/animate/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'index/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'index/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'index/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
+  <link href="{% static 'index/style.css' %}" rel="stylesheet">
 </head>
 
 <body>
@@ -63,7 +65,7 @@
   <!--==========================
     Intro Section
   ============================-->
-  <section id="intro" class="clearfix">
+  <section id="intro" class="clearfix" style="background: url('{% static 'index/intro-bg.png' %}')">
     <div class="container">
 
       <div class="intro-img">
@@ -80,13 +82,18 @@
       <div></div>
       <div class="intro-info">
         <h1 class="phone-text">Tata Motors certified Mechanic!</h1>
-        <svg width="4em" height="4em" viewBox="0 0 16 16" class="bi bi-telephone-fill" fill="white" xmlns="http://www.w3.org/2000/svg">
+        &nbsp;&nbsp;<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-telephone-fill" fill="white" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
 
         <span class="phone ml-3">+91 94866 47406 / +91 98427 47406</span>
         <!-- <span class="phone ml-3"></span> -->
         </svg>
 
+      </div>
+      
+      <div class="intro-info phone">
+        <svg width="40px" height="40px" viewBox="0 0 24 24"><g class="icon_svg-stroke" stroke="white" stroke-width="0.5" fill="white" fill-rule="evenodd" stroke-linecap="round"><path d="M12,13 C13.6568542,13 15,11.6568542 15,10 C15,8.34314575 13.6568542,7 12,7 C10.3431458,7 9,8.34314575 9,10 C9,11.6568542 10.3431458,13 12,13 Z M12,20.73 C16.6375,16.5 19,12.9 19,10.2 C19,6.2235498 15.8659932,3 12,3 C8.13400675,3 5,6.2235498 5,10.2 C5,12.9 7.3625,16.41 12,20.73 L12,20.73 Z"></path></g></svg>
+        &nbsp;&nbsp;&nbsp;<span>Attur Cuddalore main road, Kattukottai</span>
       </div>
 
     </div>
@@ -133,13 +140,13 @@
           </div>
 
           <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
-            <img src="img/about-img.svg" class="img-fluid" alt="">
+            <img src="{% static 'index/about-img.svg' %}" class="img-fluid" alt="">
           </div>
         </div>
 
         <div class="row about-extra">
           <div class="col-lg-6 wow fadeInUp">
-            <img src="img/about-extra-1.svg" class="img-fluid" alt="">
+            <img src="{% static 'index/about-extra-1.svg' %}" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
             <h4>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h4>
@@ -154,7 +161,7 @@
 
         <div class="row about-extra">
           <div class="col-lg-6 wow fadeInUp order-1 order-lg-2">
-            <img src="img/about-extra-2.svg" class="img-fluid" alt="">
+            <img src="{% static 'index/about-extra-2.svg' %}" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
@@ -423,22 +430,22 @@
   <!-- <div id="preloader"></div> -->
 
   <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/mobile-nav/mobile-nav.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/waypoints/waypoints.min.js"></script>
-  <script src="lib/counterup/counterup.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/isotope/isotope.pkgd.min.js"></script>
-  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="{% static 'index/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'index/jquery/jquery-migrate.min.js' %}"></script>
+  <script src="{% static 'index/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'index/easing/easing.min.js' %}"></script>
+  <script src="{% static 'index/mobile-nav/mobile-nav.js' %}"></script>
+  <script src="{% static 'index/wow/wow.min.js' %}"></script>
+  <script src="{% static 'index/waypoints/waypoints.min.js' %}"></script>
+  <script src="{% static 'index/counterup/counterup.min.js' %}"></script>
+  <script src="{% static 'index/owlcarousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'index/isotope/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'index/lightbox/js/lightbox.min.js' %}"></script>
   <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
+  <script src="{% static 'index/contactform/contactform.js' %}"></script>
 
   <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
+  <script src="{% static 'index/main.js' %}"></script>
 
 </body>
 </html>
