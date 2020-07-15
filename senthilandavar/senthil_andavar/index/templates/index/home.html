@@ -1,17 +1,11 @@
 {% load static %}
+{% load crispy_forms_tags %}
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Senthil Andavar</title>
-<!--   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description"> -->
-
-  <!-- Favicons -->
-<!--   <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+  <title>Senthil Andavar | Auto diesel works</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
@@ -65,7 +59,19 @@
   <!--==========================
     Intro Section
   ============================-->
+  <p>
+    {% if messages %}
+      <br><br><br>
+        {% for message in messages %}
+          <div class="alert alert-primary">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+  </p>
+
   <section id="intro" class="clearfix" style="background: url('{% static 'index/intro-bg.png' %}')">
+    
     <div class="container">
 
       <div class="intro-img">
@@ -90,7 +96,7 @@
         </svg>
 
       </div>
-      
+
       <div class="intro-info phone">
         <svg width="40px" height="40px" viewBox="0 0 24 24"><g class="icon_svg-stroke" stroke="white" stroke-width="0.5" fill="white" fill-rule="evenodd" stroke-linecap="round"><path d="M12,13 C13.6568542,13 15,11.6568542 15,10 C15,8.34314575 13.6568542,7 12,7 C10.3431458,7 9,8.34314575 9,10 C9,11.6568542 10.3431458,13 12,13 Z M12,20.73 C16.6375,16.5 19,12.9 19,10.2 C19,6.2235498 15.8659932,3 12,3 C8.13400675,3 5,6.2235498 5,10.2 C5,12.9 7.3625,16.41 12,20.73 L12,20.73 Z"></path></g></svg>
         &nbsp;&nbsp;&nbsp;<span>Attur Cuddalore main road, Kattukottai</span>
@@ -351,28 +357,10 @@
             </div>
 
             <div class="form">
-              <div id="sendmessage">Your message has been sent. Thank you!</div>
-              <div id="errormessage"></div>
-              <form action="" method="post" role="form" class="contactForm">
-                <div class="form-row">
-                  <div class="form-group col-lg-6">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                    <div class="validation"></div>
-                  </div>
-                  <div class="form-group col-lg-6">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                    <div class="validation"></div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                  <div class="validation"></div>
-                </div>
-                <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
+              <form method="POST">
+                {% csrf_token %}
+                {{ form | crispy}}
+                <button class="btn btn-outline-info" type="submit">Submit</button>
               </form>
             </div>
           </div>
