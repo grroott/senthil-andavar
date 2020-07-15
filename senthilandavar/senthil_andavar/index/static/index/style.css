@@ -1410,3 +1410,7 @@ h6 {
 .phone-text {
   color: white;
 }
+
+.address {
+  bottom: 5px;
+}

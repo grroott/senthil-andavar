@@ -340,7 +340,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6">
+          <div class="col-lg-6 address">
             <div class="row">
               <div class="col-md-5 info">
                 <i class="ion-ios-location-outline"></i>
@@ -356,13 +356,14 @@
               </div>
             </div>
 
-            <div class="form">
-              <form method="POST">
-                {% csrf_token %}
-                {{ form | crispy}}
-                <button class="btn btn-outline-info" type="submit">Submit</button>
-              </form>
-            </div>
+          </div>
+          <div class="container form-group mt-3">
+            <form method="POST">
+              {% csrf_token %}
+              <legend class="border-bottom mb-4"><strong>Leave a message!</strong></legend>
+              {{ form | crispy}}
+              <button class="btn btn-outline-info" type="submit">Submit</button>
+            </form>
           </div>
 
         </div>
