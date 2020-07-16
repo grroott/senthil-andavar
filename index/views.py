@@ -20,7 +20,7 @@ def home(request):
 			message = form.cleaned_data.get('message')
 			send_mail(
 			    "Email from Senthil andavar | " + subject,
-			    'Customer name : ' + name + '\n' + 'Customer Mobile : ' + str(mobile) + '\n' + 'Message : '+ message,
+			    'Customer name : ' + name + '\n' + 'Customer Mobile : ' + mobile + '\n' + 'Message : '+ message,
 			    os.environ.get('EMAIL_USER'),
 			    [os.environ.get('EMAIL_TO_USER')],
 			    fail_silently=False,
