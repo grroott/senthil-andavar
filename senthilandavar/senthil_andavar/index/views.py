@@ -15,12 +15,12 @@ def home(request):
 		if form.is_valid():
 			form.save()
 			name = form.cleaned_data.get('name')
-			email = form.cleaned_data.get('email')
+			mobile = form.cleaned_data.get('mobile')
 			subject = form.cleaned_data.get('subject')
 			message = form.cleaned_data.get('message')
 			send_mail(
 			    "Email from Senthil andavar | " + subject,
-			    'Customer name : ' + name + '\n' + 'Customer Email : ' + email + '\n' + 'Message : '+ message,
+			    'Customer name : ' + name + '\n' + 'Customer Mobile : ' + str(mobile) + '\n' + 'Message : '+ message,
 			    os.environ.get('EMAIL_USER'),
 			    [os.environ.get('EMAIL_TO_USER')],
 			    fail_silently=False,

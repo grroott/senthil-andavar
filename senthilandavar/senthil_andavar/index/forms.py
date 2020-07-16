@@ -5,11 +5,11 @@ class ContactForm(forms.ModelForm):
 
 	class Meta:
 		model = Contact
-		fields = ['name', 'email', 'subject', 'message']
+		fields = ['name', 'mobile', 'subject', 'message']
 
 		widgets = {
 		'name' : forms.TextInput(attrs={'class': 'input form-control', 'placeholder': 'Your Name'}),
-		'email' : forms.TextInput(attrs={'class': 'input form-control', 'placeholder': 'Your Email'}),
+		'mobile' : forms.NumberInput(attrs={'class': 'input form-control', 'placeholder': 'Your Mobile'}),
 		'subject' : forms.TextInput(attrs={'class': 'input form-control', 'placeholder': 'Subject'}),
 		'message' : forms.Textarea(attrs={'class': 'textarea form-control', 'rows': 4, 'placeholder': 'Message'})
 		}
