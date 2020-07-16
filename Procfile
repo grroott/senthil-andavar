@@ -1,0 +1,1 @@
+web: gunicorn senthil_andavar.wsgi
