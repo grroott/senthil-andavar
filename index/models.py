@@ -9,3 +9,10 @@ class Contact(models.Model):
 
     def __str__(self):
         return f'{self.subject}'
+
+
+class Newsletter(models.Model):
+	email = models.EmailField(max_length=100)
+
+	def __str__(self):
+		return f'{self.email}'
