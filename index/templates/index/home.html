@@ -63,12 +63,12 @@
       {% endif %}
   </p>
 
-  <section id="intro" class="clearfix" style="background: url('{% static 'index/intro-bg.png' %}')">
+  <section id="intro" class="clearfix" style="background: #0733e0">
     
     <div class="container">
 
-      <div class="intro-img">
-        <img src="https://media1.giphy.com/media/lrDKaXdgYqwKwArGUA/giphy.gif" alt="" width="400" height="400" class="img-fluid">
+      <div class="intro-img text-center">
+        <img src="https://media1.giphy.com/media/lrDKaXdgYqwKwArGUA/giphy.gif" alt="" width="420" height="auto" class="img-fluid">
       </div>
 
       <div class="intro-info">
@@ -77,23 +77,19 @@
           <a href="#about" class="btn-get-started scrollto">Get Started</a>
           <a href="#services" class="btn-services scrollto">Our Services</a>
         </div>
-      </div>
-      <div></div>
-      <div class="intro-info">
         <h1 class="phone-text">Tata Motors certified Mechanic!</h1>
-        &nbsp;&nbsp;<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-telephone-fill" fill="white" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
-
-        <span class="phone ml-3">V. Raja | +91 94866 47406 / +91 98427 47406</span>
-        </svg>
-
+        <br>
+        <div class="phone">
+          &nbsp;<svg width="20px" height="20px" viewBox="0 0 20 20" class="bi bi-telephone-fill" fill="white" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
+          </svg>
+          <span>&nbsp;&nbsp;V. Raja | +91 94866 47406 / +91 98427 47406</span>
+          <br>
+          <svg width="20px" height="20px" viewBox="0 0 25 25"><g class="icon_svg-stroke" stroke="white" stroke-width="0.5" fill="white" fill-rule="evenodd" stroke-linecap="round"><path d="M12,13 C13.6568542,13 15,11.6568542 15,10 C15,8.34314575 13.6568542,7 12,7 C10.3431458,7 9,8.34314575 9,10 C9,11.6568542 10.3431458,13 12,13 Z M12,20.73 C16.6375,16.5 19,12.9 19,10.2 C19,6.2235498 15.8659932,3 12,3 C8.13400675,3 5,6.2235498 5,10.2 C5,12.9 7.3625,16.41 12,20.73 L12,20.73 Z"></path></g>
+          </svg>
+          <span>&nbsp;&nbsp;&nbsp;Attur Cuddalore main road, Kattukottai</span>
+        </div>
       </div>
-
-      <div class="intro-info phone">
-        <svg width="40px" height="40px" viewBox="0 0 24 24"><g class="icon_svg-stroke" stroke="white" stroke-width="0.5" fill="white" fill-rule="evenodd" stroke-linecap="round"><path d="M12,13 C13.6568542,13 15,11.6568542 15,10 C15,8.34314575 13.6568542,7 12,7 C10.3431458,7 9,8.34314575 9,10 C9,11.6568542 10.3431458,13 12,13 Z M12,20.73 C16.6375,16.5 19,12.9 19,10.2 C19,6.2235498 15.8659932,3 12,3 C8.13400675,3 5,6.2235498 5,10.2 C5,12.9 7.3625,16.41 12,20.73 L12,20.73 Z"></path></g></svg>
-        &nbsp;&nbsp;&nbsp;<span>Attur Cuddalore main road, Kattukottai</span>
-      </div>
-
     </div>
   </section><!-- #intro -->
 
@@ -144,7 +140,7 @@
 
         <div class="row about-extra">
           <div class="col-lg-6 wow fadeInUp">
-            <img src="{% static 'index/my pic 2.jpg' %}" height="400" width="400" class="img-fluid" alt="">
+            <img src="{% static 'index/my pic 2.jpg' %}" height="800" width="800" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
             <h4>Excellent work with lowest service price!</h4>
