@@ -9,14 +9,6 @@ import requests
 os.environ['http_proxy'] = os.environ.get('IPB_HTTP', '')
 os.environ['https_proxy'] = os.environ.get('IPB_HTTPS', '')
 
-
-
-response = requests.get('http://ifconfig.com')
-print(response)
-response = requests.get('https://www.google.com')
-print(response)
-
-
 print("++++++++++++++++++++++")
 xx = requests.get('http://mapps.cricbuzz.com/cbzios/match/livematches')
 
