@@ -47,7 +47,7 @@ while True:
         fours = 0
         sixes = 0
 
-        print("Over is less than 6.0 "+ str(i['overs]))
+        print("Over is less than 6.0 "+ str(i['overs']))
         
         if float(i['overs']) <= 6.0:
             for j in i['batcard']:
