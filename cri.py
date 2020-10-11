@@ -6,17 +6,15 @@ import re
 import os
 import requests
 
+os.environ['http_proxy'] = os.environ.get('IPB_HTTP', '')
+os.environ['https_proxy'] = os.environ.get('IPB_HTTPS', '')
 
-proxies = {'http': "socks5://" + os.environ['IPB_SOCKS5'],
-           'https': "socks5://" + os.environ['IPB_SOCKS5'] }
 
-print(proxies)
 
-response = requests.get('http://ifconfig.co', proxies=proxies)
-print response.content
-
-response = requests.get('http://google.com', proxies=proxies)
-print response.text
+response = requests.get('http://ifconfig.co)
+print(response)
+response = requests.get('https://www.google.com')
+print(response)
 
 
 print("++++++++++++++++++++++")
