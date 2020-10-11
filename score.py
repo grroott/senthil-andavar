@@ -86,7 +86,7 @@ while True:
                     # print("Tweeted as " + status.text)
                     # api=[]
 
-                    print("Six"))
+                    print("Six")
 
                 total_fours = fours
                 total_sixes = sixes
