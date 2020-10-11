@@ -119,10 +119,10 @@ now = datetime.datetime.now()
 daay = now.strftime("%A")
 
 
-if strftime("%H:%M", gmttime()) == '10:00' or '10:01' or '10:02' and daay == 'Sunday' or 'Saturday':
+if strftime("%H:%M", gmtime()) == '10:00' or '10:01' or '10:02' and daay == 'Sunday' or 'Saturday':
     myfunc()
 
-if strftime("%H:%M", gmttime()) == '02:00' or '02:01' or '02:02':
+if strftime("%H:%M", gmtime()) == '02:00' or '02:01' or '02:02':
     myfunc()
 
 else:
