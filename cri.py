@@ -1,23 +1,14 @@
-#import time
-#import requests
-#import json
-#import re
 
-#import os
-#import requests
+import time
+from pycricbuzz import Cricbuzz
 
-#os.environ['http_proxy'] = os.environ.get('IPB_HTTP', '')
-#os.environ['https_proxy'] = os.environ.get('IPB_HTTPS', '')
+c = Cricbuzz()
+matches = c.matches()
 
-print("++++++++++++++++++++++")
-#xx = requests.get('http://mapps.cricbuzz.com/cbzios/match/livematches')
+print(matches)
 
-#print(xx)
-#print(xx.text)
-#print(xx.json())
-
-
-with open('dummy.txt', 'r') as f:
-        content = f.read()
-
-print(content)
+for i in matches:
+    if  i['srs'] == 'Indian Premier League 2020' and i['mchstate'] == 'inprogress' :
+        print(i)
+        mid = i['id']
+        print(mid)
