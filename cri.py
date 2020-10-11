@@ -3,21 +3,13 @@ import requests
 import json
 import re
 
-try:
-    xx = requests.get('http://mapps.cricbuzz.com/cbzios/match/livematches')
-    print(xx)
-    print(xx.text)
-    print("************************************")
+proxyDict = {
+    "http"  : os.environ.get('FIXIE_URL', ''),
+    "https" : os.environ.get('FIXIE_URL', '')
+}
 
-except:
-    pass
+print(proxyDict)
 
-x = requests.get('http://mapps.cricbuzz.com/cbzios/match/livematches')
-print(x)
-resp_parsed = re.sub(r'^jsonp\d+\(|\)\s+$', '', x.text)
+print(requests.head('http://mapps.cricbuzz.com/cbzios/match/livematches').headers)
 
-print("*****************************")
-print(resp_parsed)
-
-data = json.loads(resp_parsed)
-print(data)
+xx = requests.get('http://mapps.cricbuzz.com/cbzios/match/livematches')
