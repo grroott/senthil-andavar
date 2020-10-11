@@ -22,7 +22,7 @@ matches = c.matches()
 
 
 for i in matches:
-    if  i['srs'] == 'Indian Premier League 2020':
+    if  i['srs'] == 'Indian Premier League 2020' and i['mchstate'] == 'inprogress' :
         print(i)
         mid = i['id']
         print(mid)
@@ -30,7 +30,7 @@ for i in matches:
 
 while True:
 
-    with open('E:/dummy.txt', 'r') as f:
+    with open('dummy.txt', 'r') as f:
         content = f.read()
 
     xxx,yyy = content.split(' ')
