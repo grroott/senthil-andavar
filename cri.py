@@ -2,18 +2,16 @@ import time
 import requests
 import json
 import re
+
 import os
+import requests
 
-proxyDict = {
-    "http"  : os.environ.get('FIXIE_URL', ''),
-    "https" : os.environ.get('FIXIE_URL', '')
-}
 
-print(proxyDict)
+os.environ['http_proxy'] = os.environ.get('FIXIE_URL', '')
+os.environ['https_proxy'] = os.environ.get('FIXIE_URL', '')
 
-print(requests.head('http://mapps.cricbuzz.com/cbzios/match/livematches').headers)
 
-xx = requests.get('http://mapps.cricbuzz.com/cbzios/match/livematches', proxies=proxyDict)
+xx = requests.get('http://mapps.cricbuzz.com/cbzios/match/livematches')
 
 print(xx)
 print(xx.text)
