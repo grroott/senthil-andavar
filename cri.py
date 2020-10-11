@@ -11,7 +11,7 @@ os.environ['https_proxy'] = os.environ.get('IPB_HTTPS', '')
 
 
 
-response = requests.get('http://ifconfig.co)
+response = requests.get('http://ifconfig.com')
 print(response)
 response = requests.get('https://www.google.com')
 print(response)
