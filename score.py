@@ -3,8 +3,15 @@ import time
 from pycricbuzz import Cricbuzz
 import twitter
 import random
+import os
+import requests
 # #
 
+os.environ['http_proxy'] = os.environ.get('IPB_HTTP', '')
+os.environ['https_proxy'] = os.environ.get('IPB_HTTPS', '')
+
+print(os.environ['http_proxy'])
+print(os.environ['https_proxy'])
 
 api = twitter.Api(consumer_key=os.environ.get('CONSUMER_KEY'),
                       consumer_secret=os.environ.get('CONSUMER_SECRET'),
