@@ -13,7 +13,7 @@ print(proxyDict)
 
 print(requests.head('http://mapps.cricbuzz.com/cbzios/match/livematches').headers)
 
-xx = requests.get('http://mapps.cricbuzz.com/cbzios/match/livematches')
+xx = requests.get('http://mapps.cricbuzz.com/cbzios/match/livematches', proxies=proxyDict)
 
 print(xx)
 print(xx.text)
