@@ -14,3 +14,7 @@ print(proxyDict)
 print(requests.head('http://mapps.cricbuzz.com/cbzios/match/livematches').headers)
 
 xx = requests.get('http://mapps.cricbuzz.com/cbzios/match/livematches')
+
+print(xx)
+print(xx.text)
+print(xx.json())
