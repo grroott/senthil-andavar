@@ -263,7 +263,7 @@ def myfunc(mid):
 
     c = Cricbuzz()
 
-    count = 354
+    count = 0
 
     while count < 360:
 
@@ -276,8 +276,8 @@ def myfunc(mid):
         scard = c.scorecard(mid)
 
         x = scard['scorecard']
-        print(x)
-        print(total_fours, total_sixes)
+        #print(x)
+        #print(total_fours, total_sixes)
 
         for i in x:
 
@@ -329,7 +329,7 @@ def myfunc(mid):
                     with open('dummy.txt', 'w') as w:
                         w.write(content_to_write)
 
-        time.sleep(20)
+        time.sleep(30)
         count = count + 1
         print("Iteration count: " + str(count))
 
@@ -380,9 +380,9 @@ today_val = {
     '31OctoberAM' : '30519',
     '31OctoberPM' : '30520',
     '01NovemberAM' : '30524',
-    '01NovemberpM' : '30529',
-    '02NovemberpM' : '30534',
-    '03NovemberpM' : '30539',
+    '01NovemberPM' : '30529',
+    '02NovemberPM' : '30534',
+    '03NovemberPM' : '30539',
     }
 for k,v in today_val.items():
     if str(midd) == str(k):
