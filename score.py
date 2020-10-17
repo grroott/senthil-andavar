@@ -18,6 +18,7 @@ def myfunc(mid):
 
         def crawl_url(self, url):
             try:
+                # r = requests.get(url).json()
                 r = requests.get(url, proxies=proxyDict).json()
                 return r
             except Exception:
@@ -262,7 +263,7 @@ def myfunc(mid):
 
     c = Cricbuzz()
 
-    count = 0
+    count = 354
 
     while count < 360:
 
@@ -276,6 +277,7 @@ def myfunc(mid):
 
         x = scard['scorecard']
         print(x)
+        print(total_fours, total_sixes)
 
         for i in x:
 
@@ -326,19 +328,18 @@ def myfunc(mid):
 
                     with open('dummy.txt', 'w') as w:
                         w.write(content_to_write)
-            else:
 
-                if total_fours != 0 or total_sixes != 0:  # Reset file when overs greater than 6.0
-
-                    content_to_write = "0 0"
-
-                    with open('dummy.txt', 'w') as w:
-                        w.write(content_to_write)
-                    print("File reset done")
-
-        time.sleep(30)
+        time.sleep(20)
         count = count + 1
         print("Iteration count: " + str(count))
+
+        if count == 150 or count == 355:
+
+            content_to_write = "0 0"
+
+            with open('dummy.txt', 'w') as w:
+                w.write(content_to_write)
+            print("File reset done")
 
 
 import datetime
@@ -388,6 +389,7 @@ for k,v in today_val.items():
         mid=str(v)
 print(mid)
 
+# mid = '30409'
 
 if curtime == '14:00' or curtime == '14:01' or curtime == '14:02' or curtime == '14:03':
     myfunc(mid)
@@ -396,3 +398,5 @@ elif curtime == '10:00' or curtime == '10:01' or curtime == '10:02' or curtime =
         myfunc(mid)
 else:
     print("Not an scheduled run!!")
+
+# myfunc(mid)
